@@ -14,7 +14,7 @@ $messages = array();
  * @author Himeshi de Silva
  */
 $messages['en'] = array(
-	'git2pages-desc' => 'Adds parser function <code><nowiki>{{#snippet:}}</nowiki></code> to add content from a git repositorium into pages',
+	'git2pages-desc' => 'Adds parser function <code><nowiki>{{#snippet:}}</nowiki></code> to add content from a git repository into pages',
 );
 
 /** Message documentation (Message documentation)
