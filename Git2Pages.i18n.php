@@ -26,10 +26,11 @@ $messages['qqq'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Metalhead64
  */
 $messages['de'] = array(
-	'git2pages-desc' => 'Ergänzt die Parserfunktion <code><nowiki>{{#snippet:}}</nowiki></code> zum Hinzufügen von Inhalt aus einem Git-Repositorium in Seiten',
+	'git2pages-desc' => 'Ergänzt die Parserfunktion <code><nowiki>{{#snippet:}}</nowiki></code> zum Hinzufügen von Inhalt aus einem Git-Repositorium zu Seiten',
 );
 
 /** French (français)
@@ -51,6 +52,13 @@ $messages['gl'] = array(
  */
 $messages['ja'] = array(
 	'git2pages-desc' => 'git リポジトリの内容をページに追加するパーサー関数 <code><nowiki>{{#snippet:}}</nowiki></code> を追加する',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'git2pages-desc' => 'Ја додава парсерската функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците',
 );
 
 /** Nepali (नेपाली)
