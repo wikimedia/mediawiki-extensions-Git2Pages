@@ -47,6 +47,13 @@ $messages['gl'] = array(
 	'git2pages-desc' => 'Engade a función analítica <code><nowiki>{{#snippet:}}</nowiki></code> para engadir contidos desde un repositorio git ás páxinas',
 );
 
+/** Italian (italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'git2pages-desc' => 'Aggiunge la funzione parser <code><nowiki>{{#snippet:}}</nowiki></code> per aggiungere contenuto da un repository git nelle pagine',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
@@ -94,4 +101,11 @@ $messages['nl'] = array(
  */
 $messages['roa-tara'] = array(
 	'git2pages-desc' => "Aggiunge 'na funzione analizzatrice <code><nowiki>{{#snippet:}}</nowiki></code> pe aggiungere condenute da 'n'archivije ''git'' jndr'à le pàggene",
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'git2pages-desc' => '增加解析器函数<code><nowiki>{{#snippet:}}</nowiki></code>来添加从git仓库添加内容到页面',
 );
