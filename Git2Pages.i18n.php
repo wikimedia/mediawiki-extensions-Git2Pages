@@ -47,6 +47,13 @@ $messages['gl'] = array(
 	'git2pages-desc' => 'Engade a función analítica <code><nowiki>{{#snippet:}}</nowiki></code> para engadir contidos desde un repositorio git ás páxinas',
 );
 
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'git2pages-desc' => 'řidawa parserowu funkciju <code><nowiki>{{#snippet:}}</nowiki></code> za přidawanje wobsaha z git-repozitorija stronam',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
