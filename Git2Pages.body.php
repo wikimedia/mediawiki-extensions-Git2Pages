@@ -1,6 +1,6 @@
 <?php
 /**
- * Execution code
+ * Execution code 
  */
 include 'GitRepository.php';
 
@@ -51,20 +51,19 @@ class Git2PagesHooks {
 		for ( $i = 1; $i < func_num_args(); $i++ ) {
 			$opts[] = func_get_arg( $i );
 		}
-		$options = Git2PagesHooks::extractOptions( $opts );
+		$options = self::extractOptions( $opts );
 		$url = $options['repository'];
-		$gitFolder =  $wgGit2PagesDataDir . DIRECTORY_SEPARATOR . md5( $url );
+		if( isset( $options['branch'] ) ) {
+			$branch = wfEscapeShellArg( $options['branch'] );
+		} else {
+			$branch = 'master';
+		}
+		$gitFolder =  $wgGit2PagesDataDir . DIRECTORY_SEPARATOR . md5( $url . $branch );
 		if( !isset( $options['repository'] ) || !isset( $options['filename'] ) ) {
 			return 'repository and/or filename not defined.';
 		}
 		$gitRepo = new GitRepository( $url );
-		$gitRepo->CloneGitRepo( $url, $gitFolder );
-		if( isset( $options['branch'] ) ) {
-			$gitRepo->GitCheckoutBranch( wfEscapeShellArg($options['branch'] ), $gitFolder );
-		}
-		else {
-			$gitRepo->GitCheckoutBranch( 'master', $gitFolder );
-		}
+		$filename = $options['filename'];
 		$startLine = isset( $options['startline'] ) ? $options['startline'] : 1;
 		$endLine = isset( $options['endline'] ) ? $options['endline'] : -1;
 		if( !self::isint( $startLine ) ) {
@@ -74,7 +73,8 @@ class Git2PagesHooks {
 			return '<strong class="error">endline is not an integer.</strong>';
 		}
 		try {
-			$fileContents = $gitRepo->FindAndReadFile( $options['filename'], $gitFolder, $startLine, $endLine );
+			$gitRepo->SparseCheckoutNewRepo( $url, $gitFolder, $filename, $branch );
+			$fileContents = $gitRepo->FindAndReadFile( $filename, $gitFolder, $startLine, $endLine );
 			$output = '<pre>' . htmlspecialchars( $fileContents ) . '</pre>';
 		} catch( Exception $ex ) {
 			$output = '<strong class="error">' . $ex->getMessage() . '</strong>';
