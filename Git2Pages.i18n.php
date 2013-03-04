@@ -25,6 +25,13 @@ $messages['qqq'] = array(
 	'git2pages-desc' => '{{desc|name=Git 2 Pages|url=http://www.mediawiki.org/wiki/Extension:Git2Pages}}',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'git2pages-desc' => "Amiesta la función d'analís <code><nowiki>{{#snippet:}}</nowiki></code> p'amestar conteníu dende un almacenamientu git a les páxines",
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Metalhead64
