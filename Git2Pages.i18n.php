@@ -117,6 +117,13 @@ $messages['roa-tara'] = array(
 	'git2pages-desc' => "Aggiunge 'na funzione analizzatrice <code><nowiki>{{#snippet:}}</nowiki></code> pe aggiungere condenute da 'n'archivije ''git'' jndr'à le pàggene",
 );
 
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'git2pages-desc' => "Nagdaragdag ng tungkuling pambanghay na <code><nowiki>{{#snippet:}}</nowiki></code> upang makapagdagdag ng nilalaman magmula sa isang repositoryo ng ''git'' na papaloob sa mga pahina",
+);
+
 /** Ukrainian (українська)
  * @author Base
  */
