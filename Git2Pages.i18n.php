@@ -82,6 +82,13 @@ $messages['ko'] = array(
 	'git2pages-desc' => 'git 저장소에서 문서에 내용을 추가하는 <code><nowiki>{{#snippet:}}</nowiki></code> 파서 함수를 추가합니다',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'git2pages-desc' => 'Brängk de Paarserfonxjuhn <code lang="en"><nowiki>{{#snippet:}}</nowiki></code> en et Wiki, di Enhallde us_enem <i lang="en">git repository</i> en Sigge enbädde kann.',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
