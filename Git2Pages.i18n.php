@@ -103,6 +103,12 @@ $messages['mk'] = array(
 	'git2pages-desc' => 'Ја додава парсерската функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците',
 );
 
+/** Norwegian Bokmål (norsk bokmål)
+ */
+$messages['nb'] = array(
+	'git2pages-desc' => 'Ligger til parserfunksjonen <code><nowiki>{{#snippet:}}</nowiki></code> for å legge til innhold fra et git-kodelager på sidene',
+);
+
 /** Nepali (नेपाली)
  * @author सरोज कुमार ढकाल
  */
