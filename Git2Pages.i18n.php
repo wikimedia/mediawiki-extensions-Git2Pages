@@ -40,6 +40,13 @@ $messages['de'] = array(
 	'git2pages-desc' => 'Ergänzt die Parserfunktion <code><nowiki>{{#snippet:}}</nowiki></code> zum Hinzufügen von Inhalt aus einem Git-Repositorium zu Seiten',
 );
 
+/** Spanish (español)
+ * @author Fitoschido
+ */
+$messages['es'] = array(
+	'git2pages-desc' => 'Añade la función del analizador sintáctico <code><nowiki>{{#snippet:}}</nowiki></code> para añadir a las páginas contenido de un repositorio git',
+);
+
 /** French (français)
  * @author Gomoko
  */
