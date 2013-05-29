@@ -110,6 +110,13 @@ $messages['mk'] = array(
 	'git2pages-desc' => 'Ја додава парсерската функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'git2pages-desc' => 'Menambah fungsi penghurai <code><nowiki>{{#snippet:}}</nowiki></code> untuk menambahkan kandungan dari repositori git ke dalam halaman',
+);
+
 /** Norwegian Bokmål (norsk bokmål)
  */
 $messages['nb'] = array(
