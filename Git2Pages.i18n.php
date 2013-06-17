@@ -164,3 +164,10 @@ $messages['uk'] = array(
 $messages['zh-hans'] = array(
 	'git2pages-desc' => '增加解析器函数<code><nowiki>{{#snippet:}}</nowiki></code>来添加从git仓库添加内容到页面',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
+ */
+$messages['zh-hant'] = array(
+	'git2pages-desc' => '增加解析器函數<code><nowiki>{{#snippet:}}</nowiki></code>以從git倉庫添加内容至頁面',
+);
