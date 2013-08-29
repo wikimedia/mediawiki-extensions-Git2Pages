@@ -137,6 +137,13 @@ $messages['nl'] = array(
 	'git2pages-desc' => "Voegt de parserfunctie <code><nowiki>{{#snippet:}}</nowiki></code> toe om inhoud toe te voegen aan pagina's vanuit een git repository",
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'git2pages-desc' => 'Apond la foncion de l’analisador <code><nowiki>{{#snippet:}}</nowiki></code> per apondre de contengut dempuèi un depaus GIT dins las paginas',
+);
+
 /** Polish (polski)
  * @author Woytecr
  */
