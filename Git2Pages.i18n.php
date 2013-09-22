@@ -68,6 +68,13 @@ $messages['hsb'] = array(
 	'git2pages-desc' => 'řidawa parserowu funkciju <code><nowiki>{{#snippet:}}</nowiki></code> za přidawanje wobsaha z git-repozitorija stronam',
 );
 
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'git2pages-desc' => 'Adde al analysator syntactic le function <code><nowiki>{{#snippet:}}</nowiki></code> pro adder contento de un repositorio de git in paginas',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
