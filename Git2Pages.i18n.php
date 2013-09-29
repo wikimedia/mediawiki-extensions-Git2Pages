@@ -172,6 +172,13 @@ $messages['roa-tara'] = array(
 	'git2pages-desc' => "Aggiunge 'na funzione analizzatrice <code><nowiki>{{#snippet:}}</nowiki></code> pe aggiungere condenute da 'n'archivije ''git'' jndr'à le pàggene",
 );
 
+/** Russian (русский)
+ * @author Okras
+ */
+$messages['ru'] = array(
+	'git2pages-desc' => 'Добавляет функцию анализатора <code><nowiki>{{#snippet:}}</nowiki></code>, чтобы добавлять содержимое из git-репозитория на страницы',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
