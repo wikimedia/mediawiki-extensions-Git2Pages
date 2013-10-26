@@ -47,6 +47,13 @@ $messages['es'] = array(
 	'git2pages-desc' => 'Añade la función del analizador sintáctico <code><nowiki>{{#snippet:}}</nowiki></code> para añadir a las páginas contenido de un repositorio git',
 );
 
+/** Persian (فارسی)
+ * @author Ebraminio
+ */
+$messages['fa'] = array(
+	'git2pages-desc' => 'تابع تجزیه‌گر <code><nowiki>{{#snippet:}}</nowiki></code> برای افزودن مطالب از یک مخزن گیت به صفحه‌ها اضافه می‌کند.',
+);
+
 /** French (français)
  * @author Gomoko
  */
