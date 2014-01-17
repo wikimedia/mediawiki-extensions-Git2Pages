@@ -186,6 +186,13 @@ $messages['ru'] = array(
 	'git2pages-desc' => 'Добавляет функцию анализатора <code><nowiki>{{#snippet:}}</nowiki></code>, чтобы добавлять содержимое из git-репозитория на страницы',
 );
 
+/** Swedish (svenska)
+ * @author Lokal Profil
+ */
+$messages['sv'] = array(
+	'git2pages-desc' => 'Lägger till parserfunktionen <code><nowiki>{{#snippet:}}</nowiki></code> för att lägga till innehåll från en git-repository på sidor',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
