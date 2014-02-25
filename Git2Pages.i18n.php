@@ -68,6 +68,13 @@ $messages['gl'] = array(
 	'git2pages-desc' => 'Engade a función analítica <code><nowiki>{{#snippet:}}</nowiki></code> para engadir contidos desde un repositorio git ás páxinas',
 );
 
+/** Hebrew (עברית)
+ * @author Yona b
+ */
+$messages['he'] = array(
+	'git2pages-desc' => 'הוספת פונקציה ניתוח <code><nowiki>{{#snippet:}}</nowiki></code> כדי להוסיף מידע ממאגר GIT לעמודים',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
