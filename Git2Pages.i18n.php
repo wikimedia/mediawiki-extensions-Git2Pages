@@ -128,7 +128,7 @@ $messages['lb'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'git2pages-desc' => 'Ја додава парсерската функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците',
+	'git2pages-desc' => 'Ја додава расчленувачката функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците',
 );
 
 /** Malay (Bahasa Melayu)
