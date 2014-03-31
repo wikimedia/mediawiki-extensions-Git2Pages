@@ -7,7 +7,7 @@ $wgExtensionCredits['parserhook'][] = array(
     'path' => __FILE__,
     'name' => 'Git2Pages',
     'descriptionmsg' => 'git2pages-desc',
-    'version' => '1.0',
+    'version' => '1.1.0',
     'author' => array( 'Teresa Cho' , 'Himeshi de Silva' ),
     'url' => 'https://www.mediawiki.org/wiki/Extension:Git2Pages',
 );
@@ -21,6 +21,7 @@ $wgAutoloadClasses['Git2PagesHooks'] = $dir . '/Git2Pages.body.php';
 $wgHooks['ParserFirstCallInit'][] = 'Git2PagesHooks::Git2PagesSetup';
 
 // i18n
+$wgMessagesDirs['Git2Pages'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Git2Pages'] = $dir . '/Git2Pages.i18n.php';
 $wgExtensionMessagesFiles['Git2PagesMagic'] = $dir . '/Git2Pages.i18n.magic.php';
 

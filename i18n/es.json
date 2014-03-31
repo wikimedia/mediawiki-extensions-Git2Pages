@@ -1,0 +1,8 @@
+{
+    "@metadata": {
+        "authors": [
+            "Fitoschido"
+        ]
+    },
+    "git2pages-desc": "Añade la función del analizador sintáctico <code><nowiki>{{#snippet:}}</nowiki></code> para añadir a las páginas contenido de un repositorio git"
+}

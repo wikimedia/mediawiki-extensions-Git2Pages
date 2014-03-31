@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Kghbln",
+            "Metalhead64"
+        ]
+    },
+    "git2pages-desc": "Ergänzt die Parserfunktion <code><nowiki>{{#snippet:}}</nowiki></code> zum Hinzufügen von Inhalt aus einem Git-Repositorium zu Seiten"
+}
