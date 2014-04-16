@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Okras"
-        ]
-    },
-    "git2pages-desc": "Добавляет функцию анализатора <code><nowiki>{{#snippet:}}</nowiki></code>, чтобы добавлять содержимое из git-репозитория на страницы"
+	"@metadata": {
+		"authors": [
+			"Okras"
+		]
+	},
+	"git2pages-desc": "Добавляет функцию анализатора <code><nowiki>{{#snippet:}}</nowiki></code>, чтобы добавлять содержимое из git-репозитория на страницы"
 }

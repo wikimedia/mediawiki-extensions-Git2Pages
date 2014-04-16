@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Yfdyh000"
-        ]
-    },
-    "git2pages-desc": "增加解析器函数<code><nowiki>{{#snippet:}}</nowiki></code>来添加从git仓库添加内容到页面"
+	"@metadata": {
+		"authors": [
+			"Yfdyh000"
+		]
+	},
+	"git2pages-desc": "增加解析器函数<code><nowiki>{{#snippet:}}</nowiki></code>来添加从git仓库添加内容到页面"
 }

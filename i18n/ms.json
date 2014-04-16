@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Anakmalaysia"
-        ]
-    },
-    "git2pages-desc": "Menambah fungsi penghurai <code><nowiki>{{#snippet:}}</nowiki></code> untuk menambahkan kandungan dari repositori git ke dalam halaman"
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"git2pages-desc": "Menambah fungsi penghurai <code><nowiki>{{#snippet:}}</nowiki></code> untuk menambahkan kandungan dari repositori git ke dalam halaman"
 }

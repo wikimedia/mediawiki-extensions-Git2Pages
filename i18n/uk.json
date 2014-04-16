@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Base"
-        ]
-    },
-    "git2pages-desc": "Додає функцію парсеру <code><nowiki>{{#snippet:}}</nowiki></code> для додання вмісту із git-репозиторію у сторінки"
+	"@metadata": {
+		"authors": [
+			"Base"
+		]
+	},
+	"git2pages-desc": "Додає функцію парсеру <code><nowiki>{{#snippet:}}</nowiki></code> для додання вмісту із git-репозиторію у сторінки"
 }

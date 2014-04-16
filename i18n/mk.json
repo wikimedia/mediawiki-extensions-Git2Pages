@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Bjankuloski06"
-        ]
-    },
-    "git2pages-desc": "Ја додава расчленувачката функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците"
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"git2pages-desc": "Ја додава расчленувачката функција <code><nowiki>{{#snippet:}}</nowiki></code> за ставање на содржини од Git-складиште во страниците"
 }

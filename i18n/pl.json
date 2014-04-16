@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Woytecr"
-        ]
-    },
-    "git2pages-desc": "Dodaje funkcję parsera <code><nowiki>{{#snippet:}}</nowiki></code> służącą do dodawania zawartości repozytorium git na strony"
+	"@metadata": {
+		"authors": [
+			"Woytecr"
+		]
+	},
+	"git2pages-desc": "Dodaje funkcję parsera <code><nowiki>{{#snippet:}}</nowiki></code> służącą do dodawania zawartości repozytorium git na strony"
 }

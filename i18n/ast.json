@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xuacu"
-        ]
-    },
-    "git2pages-desc": "Amiesta la función d'analís <code><nowiki>{{#snippet:}}</nowiki></code> p'amestar conteníu dende un almacenamientu git a les páxines"
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"git2pages-desc": "Amiesta la función d'analís <code><nowiki>{{#snippet:}}</nowiki></code> p'amestar conteníu dende un almacenamientu git a les páxines"
 }

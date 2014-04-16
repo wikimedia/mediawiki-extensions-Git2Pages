@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "सरोज कुमार ढकाल"
-        ]
-    },
-    "git2pages-desc": "यसले पृष्ठमा गीट रिपोजिटरीबाट पार्सर अनुप्रयोग <code><nowiki>{{#snippet:}}</nowiki></code> थप्ने छ।"
+	"@metadata": {
+		"authors": [
+			"सरोज कुमार ढकाल"
+		]
+	},
+	"git2pages-desc": "यसले पृष्ठमा गीट रिपोजिटरीबाट पार्सर अनुप्रयोग <code><nowiki>{{#snippet:}}</nowiki></code> थप्ने छ।"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Beta16"
-        ]
-    },
-    "git2pages-desc": "Aggiunge la funzione parser <code><nowiki>{{#snippet:}}</nowiki></code> per aggiungere contenuto da un repository git nelle pagine"
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"git2pages-desc": "Aggiunge la funzione parser <code><nowiki>{{#snippet:}}</nowiki></code> per aggiungere contenuto da un repository git nelle pagine"
 }

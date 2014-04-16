@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Justincheng12345"
-        ]
-    },
-    "git2pages-desc": "增加解析器函數<code><nowiki>{{#snippet:}}</nowiki></code>以從git倉庫添加内容至頁面"
+	"@metadata": {
+		"authors": [
+			"Justincheng12345"
+		]
+	},
+	"git2pages-desc": "增加解析器函數<code><nowiki>{{#snippet:}}</nowiki></code>以從git倉庫添加内容至頁面"
 }

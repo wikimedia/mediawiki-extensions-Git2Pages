@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "아라"
-        ]
-    },
-    "git2pages-desc": "git 저장소에서 문서에 내용을 추가하는 <code><nowiki>{{#snippet:}}</nowiki></code> 파서 함수를 추가합니다"
+	"@metadata": {
+		"authors": [
+			"아라"
+		]
+	},
+	"git2pages-desc": "git 저장소에서 문서에 내용을 추가하는 <code><nowiki>{{#snippet:}}</nowiki></code> 파서 함수를 추가합니다"
 }

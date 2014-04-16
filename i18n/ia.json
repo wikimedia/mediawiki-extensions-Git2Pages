@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "McDutchie"
-        ]
-    },
-    "git2pages-desc": "Adde al analysator syntactic le function <code><nowiki>{{#snippet:}}</nowiki></code> pro adder contento de un repositorio de git in paginas"
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"git2pages-desc": "Adde al analysator syntactic le function <code><nowiki>{{#snippet:}}</nowiki></code> pro adder contento de un repositorio de git in paginas"
 }

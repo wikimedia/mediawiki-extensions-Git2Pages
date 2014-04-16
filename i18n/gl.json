@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Toliño"
-        ]
-    },
-    "git2pages-desc": "Engade a función analítica <code><nowiki>{{#snippet:}}</nowiki></code> para engadir contidos desde un repositorio git ás páxinas"
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"git2pages-desc": "Engade a función analítica <code><nowiki>{{#snippet:}}</nowiki></code> para engadir contidos desde un repositorio git ás páxinas"
 }

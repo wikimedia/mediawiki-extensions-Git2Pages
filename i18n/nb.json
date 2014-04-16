@@ -1,6 +1,4 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "git2pages-desc": "Ligger til parserfunksjonen <code><nowiki>{{#snippet:}}</nowiki></code> for å legge til innhold fra et git-kodelager på sidene"
+	"@metadata": [],
+	"git2pages-desc": "Ligger til parserfunksjonen <code><nowiki>{{#snippet:}}</nowiki></code> for å legge til innhold fra et git-kodelager på sidene"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Shirayuki"
-        ]
-    },
-    "git2pages-desc": "git リポジトリの内容をページに追加するパーサー関数 <code><nowiki>{{#snippet:}}</nowiki></code> を追加する"
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"git2pages-desc": "git リポジトリの内容をページに追加するパーサー関数 <code><nowiki>{{#snippet:}}</nowiki></code> を追加する"
 }
