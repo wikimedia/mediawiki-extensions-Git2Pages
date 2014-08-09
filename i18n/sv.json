@@ -4,5 +4,5 @@
 			"Lokal Profil"
 		]
 	},
-	"git2pages-desc": "Lägger till parserfunktionen <code><nowiki>{{#snippet:}}</nowiki></code> för att lägga till innehåll från en git-repository på sidor"
+	"git2pages-desc": "Lägger till parserfunktionen <code><nowiki>{{#snippet:}}</nowiki></code> för att lägga till innehåll från en git-centralförvar på sidor"
 }
