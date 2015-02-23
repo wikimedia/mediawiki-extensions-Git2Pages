@@ -42,11 +42,11 @@ class GitRepository {
 		$sparseCheckoutFile = '.git/info/sparse-checkout';
 		if( $file = file_get_contents( $gitFolder . DIRECTORY_SEPARATOR . $sparseCheckoutFile ) ) {
 			if( strpos( $file, $checkoutItem ) === false ) {
-				wfShellExec( 'echo ' . $checkoutItem . ' >> ' . $sparseCheckoutFile );
+				wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
 			}
 		} else {
-			wfShellExec( 'touch ' . $sparseCheckoutFile );
-			wfShellExec( 'echo ' . $checkoutItem . ' >> ' . $sparseCheckoutFile );
+			wfShellExec( 'touch ' . wfEscapeShellArg( $sparseCheckoutFile ) );
+			wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
 		}
 		wfShellExec( 'git read-tree -mu HEAD' );
 		chdir( $oldDir );
@@ -64,11 +64,11 @@ class GitRepository {
 			chdir( $gitFolder );
 			$sparseCheckoutFile = '.git/info/sparse-checkout';
 			wfShellExec( 'git init' );
-			wfShellExec( 'git remote add -f origin ' . $url );
+			wfShellExec( 'git remote add -f origin ' . wfEscapeShellArg( $url ) );
 			wfShellExec( 'git config core.sparsecheckout true' );
-			wfShellExec( 'touch ' . $sparseCheckoutFile );
-			wfShellExec( 'echo ' . $checkoutItem . ' >> ' . $sparseCheckoutFile );
-			wfShellExec( 'git pull ' . $url . ' ' . $branch );
+			wfShellExec( 'touch ' . wfEscapeShellArg( $sparseCheckoutFile ) );
+			wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( sparseCheckoutFile ) );
+			wfShellExec( 'git pull ' . wfEscapeShellArg( $url ) . ' ' . wfEscapeShellArg( $branch ) );
 			wfDebug( 'GitRepository: Sparse checkout subdirectory' );
 			chdir( $oldDir );
 		} else {
@@ -84,7 +84,7 @@ class GitRepository {
 	 * @param string $gitFolder is the Git repository in which the branch will be checked in
 	 */
 	function GitCheckoutBranch( $branch, $gitFolder ) {
-		wfShellExec( 'git --git-dir=' . $gitFolder . '/.git --work-tree=' . $gitFolder . ' checkout ' . $branch );
+		wfShellExec( 'git --git-dir=' . wfEscapeShellArg( $gitFolder ) . '/.git --work-tree=' . wfEscapeShellArg( $gitFolder ) . ' checkout ' . wfEscapeShellArg( $branch ) );
 		wfDebug( 'GitRepository: Changed to branch ' . $branch );
 	}
 
@@ -95,7 +95,15 @@ class GitRepository {
 	 * @param array $options contains user inputs
 	 */
 	function FindAndReadFile( $filename, $gitFolder, $startLine = 1, $endLine = -1 ) {
+		# Remove file separators (dots) and slashes to prevent directory traversal attack
+		$filename = preg_replace( '@[\\\\/!]|^\.+?&#@', '', $filename );
 		$filePath = $gitFolder . DIRECTORY_SEPARATOR . $filename;
+
+		# Throw an exception if $gitFolder doesn't look like a folder
+		if ( strcmp( $gitFolder, realpath( $filePath ) ) !== 0 ) {
+			throw new Exception( 'The parameter "$gitFolder" does not seem to be a folder.' );
+		}
+
 		if( $fileArray = file( $filePath ) ) {
 			if( $endLine == -1 ) {
 				$lineBlock = array_slice( $fileArray, $startLine - 1 );
