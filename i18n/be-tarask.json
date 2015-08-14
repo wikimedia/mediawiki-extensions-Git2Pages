@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"git2pages-desc": "Дадае функцыю парсэру <code><nowiki>{{#snippet:}}</nowiki></code>, якая дадае зьмест з git-сховішча на старонкі"
+}
