@@ -67,7 +67,7 @@ class GitRepository {
 			wfShellExec( 'git remote add -f origin ' . wfEscapeShellArg( $url ) );
 			wfShellExec( 'git config core.sparsecheckout true' );
 			wfShellExec( 'touch ' . wfEscapeShellArg( $sparseCheckoutFile ) );
-			wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( sparseCheckoutFile ) );
+			wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
 			wfShellExec( 'git pull ' . wfEscapeShellArg( $url ) . ' ' . wfEscapeShellArg( $branch ) );
 			wfDebug( 'GitRepository: Sparse checkout subdirectory' );
 			chdir( $oldDir );
@@ -100,7 +100,7 @@ class GitRepository {
 		$filePath = $gitFolder . DIRECTORY_SEPARATOR . $filename;
 
 		# Throw an exception if $gitFolder doesn't look like a folder
-		if ( strcmp( $gitFolder, realpath( $filePath ) ) !== 0 ) {
+		if ( strcmp( $gitFolder, realpath( $gitFolder ) ) !== 0 ) {
 			throw new Exception( 'The parameter "$gitFolder" does not seem to be a folder.' );
 		}
 
