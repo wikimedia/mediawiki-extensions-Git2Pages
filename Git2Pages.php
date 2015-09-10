@@ -7,7 +7,7 @@ $wgExtensionCredits['parserhook'][] = array(
     'path' => __FILE__,
     'name' => 'Git2Pages',
     'descriptionmsg' => 'git2pages-desc',
-    'version' => '1.1.0',
+    'version' => '1.1.1',
     'author' => array( 'Teresa Cho' , 'Himeshi de Silva' ),
     'url' => 'https://www.mediawiki.org/wiki/Extension:Git2Pages',
 );
