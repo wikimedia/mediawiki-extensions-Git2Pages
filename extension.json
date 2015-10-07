@@ -1,0 +1,33 @@
+{
+	"name": "Git2Pages",
+	"version": "1.1.1",
+	"author": [
+		"Teresa Cho",
+		"Himeshi de Silva"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Git2Pages",
+	"descriptionmsg": "git2pages-desc",
+	"type": "parserhook",
+	"callback": "Git2PagesHooks::setGit2PagesDataDir",
+	"config": {
+		"Git2PagesDataDir": null
+	},
+	"MessagesDirs": {
+		"Git2Pages": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"Git2PagesMagic": "Git2Pages.i18n.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"Git2PagesHooks::Git2PagesSetup"
+		]
+	},
+	"AutoloadClasses": {
+		"Git2PagesHooks": "Git2Pages.body.php",
+		"GitRepository": "GitRepository.php"
+	},
+	"manifest_version": 1
+}

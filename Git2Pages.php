@@ -1,29 +1,15 @@
 <?php
-/**
- * Setup instructions for GitRepoExtension parser function
- */
 
-$wgExtensionCredits['parserhook'][] = array(
-    'path' => __FILE__,
-    'name' => 'Git2Pages',
-    'descriptionmsg' => 'git2pages-desc',
-    'version' => '1.1.1',
-    'author' => array( 'Teresa Cho' , 'Himeshi de Silva' ),
-    'url' => 'https://www.mediawiki.org/wiki/Extension:Git2Pages',
-);
-
-$dir = __DIR__;
-
-// Load the extension body to call the static function in the hook
-$wgAutoloadClasses['Git2PagesHooks'] = $dir . '/Git2Pages.body.php';
-
-// The function that will initialize the parser function
-$wgHooks['ParserFirstCallInit'][] = 'Git2PagesHooks::Git2PagesSetup';
-
-// i18n
-$wgMessagesDirs['Git2Pages'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['Git2Pages'] = $dir . '/Git2Pages.i18n.php';
-$wgExtensionMessagesFiles['Git2PagesMagic'] = $dir . '/Git2Pages.i18n.magic.php';
-
-// Options default values
-$wgGit2PagesDataDir = sys_get_temp_dir();
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'Git2Pages' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['Git2Pages'] = __DIR__ . '/i18n';
+	$wgExtensionMessagesFiles['Git2PagesMagic'] = __DIR__ . '/Git2Pages.i18n.magic.php';
+	wfWarn(
+	'Deprecated PHP entry point used for Git2Pages extension. Please use wfLoadExtension instead, ' .
+	'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the Git2Pages extension requires MediaWiki 1.25+' );
+}

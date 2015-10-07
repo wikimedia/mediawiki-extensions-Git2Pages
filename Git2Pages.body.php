@@ -1,10 +1,21 @@
 <?php
 /**
- * Execution code 
+ * Execution code
  */
-include 'GitRepository.php';
 
 class Git2PagesHooks {
+
+	/**
+	* Sets the value of $wgGit2PagesDataDir
+	*/
+
+	public static function setGit2PagesDataDir() {
+		global $wgGit2PagesDataDir;
+		//Options default values
+		$wgGit2PagesDataDir = sys_get_temp_dir();
+	}
+
+
 	public static function Git2PagesSetup( $parser ) {
 		$parser->setFunctionHook( 'snippet', array( 'Git2PagesHooks', 'PullContentFromRepo' ) );
 		return true;
