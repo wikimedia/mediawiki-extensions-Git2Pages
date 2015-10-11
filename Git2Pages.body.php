@@ -11,7 +11,7 @@ class Git2PagesHooks {
 
 	public static function setGit2PagesDataDir() {
 		global $wgGit2PagesDataDir;
-		//Options default values
+		// Options default values
 		$wgGit2PagesDataDir = sys_get_temp_dir();
 	}
 
@@ -48,7 +48,7 @@ class Git2PagesHooks {
 	 * @return bool true if it is an int value, false otherwise
 	 */
 	static function isint( $mixed ) {
-		return ( preg_match( '/^\d*$/'  , $mixed) == 1 );
+		return ( preg_match( '/^\d*$/' , $mixed ) == 1 );
 	}
 
 	/**
@@ -64,30 +64,30 @@ class Git2PagesHooks {
 		}
 		$options = self::extractOptions( $opts );
 		$url = $options['repository'];
-		if( isset( $options['branch'] ) ) {
+		if ( isset( $options['branch'] ) ) {
 			$branch = wfEscapeShellArg( $options['branch'] );
 		} else {
 			$branch = 'master';
 		}
-		$gitFolder =  $wgGit2PagesDataDir . DIRECTORY_SEPARATOR . md5( $url . $branch );
-		if( !isset( $options['repository'] ) || !isset( $options['filename'] ) ) {
+		$gitFolder = $wgGit2PagesDataDir . DIRECTORY_SEPARATOR . md5( $url . $branch );
+		if ( !isset( $options['repository'] ) || !isset( $options['filename'] ) ) {
 			return 'repository and/or filename not defined.';
 		}
 		$gitRepo = new GitRepository( $url );
 		$filename = $options['filename'];
 		$startLine = isset( $options['startline'] ) ? $options['startline'] : 1;
 		$endLine = isset( $options['endline'] ) ? $options['endline'] : -1;
-		if( !self::isint( $startLine ) ) {
+		if ( !self::isint( $startLine ) ) {
 			return '<strong class="error">startline is not an integer.</strong>';
 		}
-		if( $endLine != -1 && !self::isint( $endLine ) ) {
+		if ( $endLine != -1 && !self::isint( $endLine ) ) {
 			return '<strong class="error">endline is not an integer.</strong>';
 		}
 		try {
 			$gitRepo->SparseCheckoutNewRepo( $url, $gitFolder, $filename, $branch );
 			$fileContents = $gitRepo->FindAndReadFile( $filename, $gitFolder, $startLine, $endLine );
 			$output = '<pre>' . htmlspecialchars( $fileContents ) . '</pre>';
-		} catch( Exception $ex ) {
+		} catch ( Exception $ex ) {
 			$output = '<strong class="error">' . $ex->getMessage() . '</strong>';
 		}
 		return array( $output, 'nowiki' => true, 'noparse' => true, 'isHTML' => true );
