@@ -42,11 +42,17 @@ class GitRepository {
 		$sparseCheckoutFile = '.git/info/sparse-checkout';
 		if ( $file = file_get_contents( $gitFolder . DIRECTORY_SEPARATOR . $sparseCheckoutFile ) ) {
 			if ( strpos( $file, $checkoutItem ) === false ) {
-				wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
+				wfShellExec(
+					'echo ' . wfEscapeShellArg( $checkoutItem ) .
+					' >> ' . wfEscapeShellArg( $sparseCheckoutFile )
+				);
 			}
 		} else {
 			wfShellExec( 'touch ' . wfEscapeShellArg( $sparseCheckoutFile ) );
-			wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
+			wfShellExec(
+				'echo ' . wfEscapeShellArg( $checkoutItem ) .
+				' >> ' . wfEscapeShellArg( $sparseCheckoutFile )
+			);
 		}
 		wfShellExec( 'git read-tree -mu HEAD' );
 		chdir( $oldDir );
@@ -67,7 +73,10 @@ class GitRepository {
 			wfShellExec( 'git remote add -f origin ' . wfEscapeShellArg( $url ) );
 			wfShellExec( 'git config core.sparsecheckout true' );
 			wfShellExec( 'touch ' . wfEscapeShellArg( $sparseCheckoutFile ) );
-			wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
+			wfShellExec(
+				'echo ' . wfEscapeShellArg( $checkoutItem ) .
+				' >> ' . wfEscapeShellArg( $sparseCheckoutFile )
+			);
 			wfShellExec( 'git pull ' . wfEscapeShellArg( $url ) . ' ' . wfEscapeShellArg( $branch ) );
 			wfDebug( 'GitRepository: Sparse checkout subdirectory' );
 			chdir( $oldDir );
@@ -84,7 +93,12 @@ class GitRepository {
 	 * @param string $gitFolder is the Git repository in which the branch will be checked in
 	 */
 	function GitCheckoutBranch( $branch, $gitFolder ) {
-		wfShellExec( 'git --git-dir=' . wfEscapeShellArg( $gitFolder ) . '/.git --work-tree=' . wfEscapeShellArg( $gitFolder ) . ' checkout ' . wfEscapeShellArg( $branch ) );
+		$folder = wfEscapeShellArg( $gitFolder );
+		wfShellExec(
+			'git --git-dir=' . $folder . '/.git' .
+			' --work-tree=' . $folder . ' checkout ' .
+			wfEscapeShellArg( $branch )
+		);
 		wfDebug( 'GitRepository: Changed to branch ' . $branch );
 	}
 

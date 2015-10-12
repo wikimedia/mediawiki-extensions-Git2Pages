@@ -6,16 +6,17 @@
 class Git2PagesHooks {
 
 	/**
-	* Sets the value of $wgGit2PagesDataDir
-	*/
-
+	 * Sets the value of $wgGit2PagesDataDir
+	 **/
 	public static function setGit2PagesDataDir() {
 		global $wgGit2PagesDataDir;
 		// Options default values
 		$wgGit2PagesDataDir = sys_get_temp_dir();
 	}
 
-
+	/**
+	 * Registers the parser function hook
+	 */
 	public static function Git2PagesSetup( $parser ) {
 		$parser->setFunctionHook( 'snippet', array( 'Git2PagesHooks', 'PullContentFromRepo' ) );
 		return true;
@@ -44,17 +45,17 @@ class Git2PagesHooks {
 	/**
 	 * Checks if value is an int whether it is type string or int.
 	 *
-	 * @param $mixed contains value to be checked
+	 * @param mixed $mixed contains value to be checked
 	 * @return bool true if it is an int value, false otherwise
 	 */
 	static function isint( $mixed ) {
-		return ( preg_match( '/^\d*$/' , $mixed ) == 1 );
+		return preg_match( '/^\d*$/', $mixed ) == 1;
 	}
 
 	/**
 	 * Pulls the content from a repository
 	 *
-	 * @param $parser will contain an array of params. The first element is the Parser object. The rest of the elements will be the user input values that will be converted.
+	 * @param array $parser Array, the first element a Parser instance, then the user input values
 	 */
 	public static function PullContentFromRepo( $parser ) {
 		global $wgGit2PagesDataDir;
