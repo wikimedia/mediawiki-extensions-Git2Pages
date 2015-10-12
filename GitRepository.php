@@ -21,7 +21,7 @@ class GitRepository {
 	 * @param string $gitFolder path to local git repo where repo is cloned
 	 */
 	static function CloneGitRepo( $url, $gitFolder ) {
-		if( !file_exists( $gitFolder ) ) {
+		if ( !file_exists( $gitFolder ) ) {
 			wfShellExec( 'git clone ' . wfEscapeShellArg( $url ) . ' ' . $gitFolder );
 			wfDebug( 'GitRepository: Cloned a git repository.' );
 		}
@@ -40,8 +40,8 @@ class GitRepository {
 		$oldDir = getcwd();
 		chdir( $gitFolder );
 		$sparseCheckoutFile = '.git/info/sparse-checkout';
-		if( $file = file_get_contents( $gitFolder . DIRECTORY_SEPARATOR . $sparseCheckoutFile ) ) {
-			if( strpos( $file, $checkoutItem ) === false ) {
+		if ( $file = file_get_contents( $gitFolder . DIRECTORY_SEPARATOR . $sparseCheckoutFile ) ) {
+			if ( strpos( $file, $checkoutItem ) === false ) {
 				wfShellExec( 'echo ' . wfEscapeShellArg( $checkoutItem ) . ' >> ' . wfEscapeShellArg( $sparseCheckoutFile ) );
 			}
 		} else {
@@ -59,7 +59,7 @@ class GitRepository {
 	 */
 	static function SparseCheckoutNewRepo( $url, $gitFolder, $checkoutItem, $branch ) {
 		$oldDir = getcwd();
-		if( !file_exists( $gitFolder ) ) {
+		if ( !file_exists( $gitFolder ) ) {
 			mkdir( $gitFolder );
 			chdir( $gitFolder );
 			$sparseCheckoutFile = '.git/info/sparse-checkout';
@@ -91,7 +91,7 @@ class GitRepository {
 	/**
 	 * Finds and reads the file.
 	 *
-	 * @param string $gitFolder contains the path to  git repo folder
+	 * @param string $gitFolder contains the path to Git repo folder
 	 * @param array $options contains user inputs
 	 */
 	function FindAndReadFile( $filename, $gitFolder, $startLine = 1, $endLine = -1 ) {
@@ -104,8 +104,8 @@ class GitRepository {
 			throw new Exception( 'The parameter "$gitFolder" does not seem to be a folder.' );
 		}
 
-		if( $fileArray = file( $filePath ) ) {
-			if( $endLine == -1 ) {
+		if ( $fileArray = file( $filePath ) ) {
+			if ( $endLine == -1 ) {
 				$lineBlock = array_slice( $fileArray, $startLine - 1 );
 			} else {
 				$offset = $endLine - $startLine;
