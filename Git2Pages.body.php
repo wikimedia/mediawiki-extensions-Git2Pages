@@ -58,10 +58,10 @@ class Git2PagesHooks {
 	 */
 	public static function PullContentFromRepo( $parser ) {
 		global $wgGit2PagesDataDir;
-		$opts = array();
-		for ( $i = 1; $i < func_num_args(); $i++ ) {
-			$opts[] = func_get_arg( $i );
-		}
+
+		$opts = func_get_args();
+		array_shift( $opts );
+
 		$options = self::extractOptions( $opts );
 		$url = $options['repository'];
 		if ( isset( $options['branch'] ) ) {
