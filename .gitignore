@@ -9,3 +9,7 @@
 *.ipr
 *.iws
 .idea/
+
+# Composer
+composer.lock
+vendor
