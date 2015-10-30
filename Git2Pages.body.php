@@ -66,7 +66,7 @@ class Git2PagesHooks {
 		$options = self::extractOptions( $opts );
 		$url = $options['repository'];
 		if ( isset( $options['branch'] ) ) {
-			$branch = wfEscapeShellArg( $options['branch'] );
+			$branch = $options['branch'];
 		} else {
 			$branch = 'master';
 		}
