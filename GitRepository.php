@@ -21,8 +21,12 @@ class GitRepository {
 	 * @param string $gitFolder path to local git repo where repo is cloned
 	 */
 	static function CloneGitRepo( $url, $gitFolder ) {
+		$proxy = Http::getProxy();
 		if ( !file_exists( $gitFolder ) ) {
-			wfShellExec( 'git clone ' . wfEscapeShellArg( $url ) . ' ' . $gitFolder );
+			wfShellExec( 'git clone ' . wfEscapeShellArg( $url ) . ' ' . $gitFolder, $retval, [
+				"http_proxy" => $proxy,
+				"https_proxy" => $proxy,
+			] );
 			wfDebug( 'GitRepository: Cloned a git repository.' );
 		}
 		else {
@@ -54,7 +58,12 @@ class GitRepository {
 				' >> ' . wfEscapeShellArg( $sparseCheckoutFile )
 			);
 		}
-		wfShellExec( 'git read-tree -mu HEAD' );
+
+		$proxy = Http::getProxy();
+		wfShellExec( 'git read-tree -mu HEAD', $retval, [
+			"http_proxy" => $proxy,
+			"https_proxy" => $proxy,
+		] );
 		chdir( $oldDir );
 	}
 	/**
@@ -68,16 +77,29 @@ class GitRepository {
 		if ( !file_exists( $gitFolder ) ) {
 			mkdir( $gitFolder );
 			chdir( $gitFolder );
+
+			$proxy = Http::getProxy();
+
 			$sparseCheckoutFile = '.git/info/sparse-checkout';
 			wfShellExec( 'git init' );
-			wfShellExec( 'git remote add -f origin ' . wfEscapeShellArg( $url ) );
+			wfShellExec( 'git remote add -f origin ' . wfEscapeShellArg( $url ), $retval, [
+				"http_proxy" => $proxy,
+				"https_proxy" => $proxy,
+			] );
 			wfShellExec( 'git config core.sparsecheckout true' );
 			wfShellExec( 'touch ' . wfEscapeShellArg( $sparseCheckoutFile ) );
 			wfShellExec(
 				'echo ' . wfEscapeShellArg( $checkoutItem ) .
 				' >> ' . wfEscapeShellArg( $sparseCheckoutFile )
 			);
-			wfShellExec( 'git pull ' . wfEscapeShellArg( $url ) . ' ' . wfEscapeShellArg( $branch ) );
+			wfShellExec(
+				'git pull ' . wfEscapeShellArg( $url ) . ' ' . wfEscapeShellArg( $branch ),
+				$retval,
+				[
+					"http_proxy" => $proxy,
+					"https_proxy" => $proxy,
+				]
+			);
 			wfDebug( 'GitRepository: Sparse checkout subdirectory' );
 			chdir( $oldDir );
 		} else {
