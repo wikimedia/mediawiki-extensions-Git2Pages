@@ -28,8 +28,7 @@ class GitRepository {
 				"https_proxy" => $proxy,
 			] );
 			wfDebug( 'GitRepository: Cloned a git repository.' );
-		}
-		else {
+		} else {
 			wfDebug( 'GitRepository: git repository exists, didn\'t clone.' );
 		}
 	}
@@ -44,7 +43,8 @@ class GitRepository {
 		$oldDir = getcwd();
 		chdir( $gitFolder );
 		$sparseCheckoutFile = '.git/info/sparse-checkout';
-		if ( $file = file_get_contents( $gitFolder . DIRECTORY_SEPARATOR . $sparseCheckoutFile ) ) {
+		$file = file_get_contents( $gitFolder . DIRECTORY_SEPARATOR . $sparseCheckoutFile );
+		if ( $file ) {
 			if ( strpos( $file, $checkoutItem ) === false ) {
 				wfShellExec(
 					'echo ' . wfEscapeShellArg( $checkoutItem ) .
@@ -140,7 +140,8 @@ class GitRepository {
 			throw new Exception( 'The parameter "$gitFolder" does not seem to be a folder.' );
 		}
 
-		if ( $fileArray = file( $filePath ) ) {
+		$fileArray = file( $filePath );
+		if ( $fileArray ) {
 			if ( $endLine == -1 ) {
 				$lineBlock = array_slice( $fileArray, $startLine - 1 );
 			} else {
@@ -148,8 +149,7 @@ class GitRepository {
 				$lineBlock = array_slice( $fileArray, $startLine - 1, $offset + 1 );
 			}
 			return implode( $lineBlock );
-		}
-		else {
+		} else {
 			wfDebug( 'GitRepository: File does not exist or is unreadable' );
 			throw new Exception( "File does not exist or is unreadable." );
 		}
