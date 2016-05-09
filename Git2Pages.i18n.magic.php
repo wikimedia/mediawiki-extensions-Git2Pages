@@ -3,10 +3,10 @@
  * Internationalization file.
  */
 
-$magicWords = array();
+$magicWords = [];
 
 /** English (English) */
-$magicWords['en'] = array(
-	'snippet' => array( 0, 'snippet' )
-);
+$magicWords['en'] = [
+	'snippet' => [ 0, 'snippet' ]
+];
 

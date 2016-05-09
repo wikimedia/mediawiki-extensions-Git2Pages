@@ -18,7 +18,7 @@ class Git2PagesHooks {
 	 * Registers the parser function hook
 	 */
 	public static function Git2PagesSetup( $parser ) {
-		$parser->setFunctionHook( 'snippet', array( 'Git2PagesHooks', 'PullContentFromRepo' ) );
+		$parser->setFunctionHook( 'snippet', [ 'Git2PagesHooks', 'PullContentFromRepo' ] );
 		return true;
 	}
 
@@ -30,7 +30,7 @@ class Git2PagesHooks {
 	 * @return array $results
 	 */
 	static function extractOptions( array $options ) {
-		$results = array();
+		$results = [];
 		foreach ( $options as $option ) {
 			$pair = explode( '=', $option );
 			if ( count( $pair ) == 2 ) {
@@ -91,6 +91,6 @@ class Git2PagesHooks {
 		} catch ( Exception $ex ) {
 			$output = '<strong class="error">' . $ex->getMessage() . '</strong>';
 		}
-		return array( $output, 'nowiki' => true, 'noparse' => true, 'isHTML' => true );
+		return [ $output, 'nowiki' => true, 'noparse' => true, 'isHTML' => true ];
 	}
 }
