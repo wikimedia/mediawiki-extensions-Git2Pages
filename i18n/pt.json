@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"git2pages-desc": "Adiciona a função <code><nowiki>{{#snippet:}}</nowiki></code> ao analisador sintático, para adicionar às páginas conteúdos de um repositório git"
+}
