@@ -9,4 +9,3 @@ $magicWords = [];
 $magicWords['en'] = [
 	'snippet' => [ 0, 'snippet' ]
 ];
-
