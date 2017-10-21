@@ -7,7 +7,7 @@ class Git2PagesHooks {
 
 	/**
 	 * Sets the value of $wgGit2PagesDataDir
-	 **/
+	 */
 	public static function setGit2PagesDataDir() {
 		global $wgGit2PagesDataDir;
 		// Options default values
