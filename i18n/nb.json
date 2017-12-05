@@ -1,4 +1,8 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
 	"git2pages-desc": "Ligger til parserfunksjonen <code><nowiki>{{#snippet:}}</nowiki></code> for å legge til innhold fra et git-kodelager på sidene"
 }
