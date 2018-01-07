@@ -3,6 +3,7 @@
  * A class to manipulate a Git repository.
  */
 class GitRepository {
+	/** @var string */
 	protected $gitUrl;
 
 	/**
@@ -66,11 +67,14 @@ class GitRepository {
 		] );
 		chdir( $oldDir );
 	}
+
 	/**
 	 * Clones just the .git folder
 	 *
 	 * @param string $url
 	 * @param string $gitFolder
+	 * @param string $checkoutItem
+	 * @param string $branch
 	 */
 	static function SparseCheckoutNewRepo( $url, $gitFolder, $checkoutItem, $branch ) {
 		$oldDir = getcwd();
@@ -127,8 +131,12 @@ class GitRepository {
 	/**
 	 * Finds and reads the file.
 	 *
+	 * @param string $filename
 	 * @param string $gitFolder contains the path to Git repo folder
-	 * @param array $options contains user inputs
+	 * @param int $startLine
+	 * @param int $endLine
+	 * @return string
+	 * @throws Exception
 	 */
 	function FindAndReadFile( $filename, $gitFolder, $startLine = 1, $endLine = -1 ) {
 		# Remove file separators (dots) and slashes to prevent directory traversal attack

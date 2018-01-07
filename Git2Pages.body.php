@@ -16,6 +16,8 @@ class Git2PagesHooks {
 
 	/**
 	 * Registers the parser function hook
+	 * @param Parser $parser
+	 * @return true
 	 */
 	public static function Git2PagesSetup( $parser ) {
 		$parser->setFunctionHook( 'snippet', [ 'Git2PagesHooks', 'PullContentFromRepo' ] );
@@ -26,8 +28,8 @@ class Git2PagesHooks {
 	 * Converts an array of values in form [0] => "name=value" into a real
 	 * associative array in form [name] => value
 	 *
-	 * @param array string $options
-	 * @return array $results
+	 * @param array $options
+	 * @return array
 	 */
 	static function extractOptions( array $options ) {
 		$results = [];
@@ -56,6 +58,7 @@ class Git2PagesHooks {
 	 * Pulls the content from a repository
 	 *
 	 * @param array $parser Array, the first element a Parser instance, then the user input values
+	 * @return string|array
 	 */
 	public static function PullContentFromRepo( $parser ) {
 		global $wgGit2PagesDataDir;
