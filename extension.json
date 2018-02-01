@@ -7,7 +7,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:Git2Pages",
 	"descriptionmsg": "git2pages-desc",
-	"license-name": "GPL-2.0+",
+	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
 	"callback": "Git2PagesHooks::setGit2PagesDataDir",
 	"config": {
