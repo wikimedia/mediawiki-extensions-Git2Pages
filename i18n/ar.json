@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"git2pages-desc": "يضيف دالة المحلل <code><nowiki>{{#snippet:}}</nowiki></code> لإضافة محتوى من مستودع git إلى الصفحات"
+}
