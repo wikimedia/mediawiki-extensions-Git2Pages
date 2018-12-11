@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zoranzoki21"
+		]
+	},
+	"git2pages-desc": "Dodaje funkciju parsera <code><nowiki>{{#snippet:}}</nowiki></code> za dodavanje sadržaja iz git skladišta u stranice"
+}
