@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zoranzoki21"
+			"Zoranzoki21",
+			"BadDog"
 		]
 	},
-	"git2pages-desc": "Додаје функцију парсера <code><nowiki>{{#snippet:}}</nowiki></code> за додавање садржаја из гит складишта у странице"
+	"git2pages-desc": "Додаје функцију рашчлањивача <code><nowiki>{{#snippet:}}</nowiki></code> за додавање садржаја из git складишта у странице"
 }
