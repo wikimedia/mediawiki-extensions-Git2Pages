@@ -22,9 +22,7 @@
 		"Git2PagesMagic": "Git2Pages.i18n.magic.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"Git2PagesHooks::Git2PagesSetup"
-		]
+		"ParserFirstCallInit": "Git2PagesHooks::Git2PagesSetup"
 	},
 	"AutoloadClasses": {
 		"Git2PagesHooks": "Git2Pages.body.php",
