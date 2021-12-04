@@ -9,6 +9,9 @@
 	"descriptionmsg": "git2pages-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
 	"callback": "Git2PagesHooks::setGit2PagesDataDir",
 	"config": {
 		"Git2PagesDataDir": null
