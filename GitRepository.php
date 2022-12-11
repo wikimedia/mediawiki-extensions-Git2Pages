@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * A class to manipulate a Git repository.
  */
@@ -22,7 +25,7 @@ class GitRepository {
 	 * @param string $gitFolder path to local git repo where repo is cloned
 	 */
 	static function CloneGitRepo( $url, $gitFolder ) {
-		$proxy = Http::getProxy();
+		$proxy = (string)MediaWikiServices::getInstance()->getMainConfig()->get( 'HTTPProxy' );
 		if ( !file_exists( $gitFolder ) ) {
 			wfShellExec( 'git clone ' . wfEscapeShellArg( $url ) . ' ' . $gitFolder, $retval, [
 				"http_proxy" => $proxy,
@@ -60,7 +63,7 @@ class GitRepository {
 			);
 		}
 
-		$proxy = Http::getProxy();
+		$proxy = (string)MediaWikiServices::getInstance()->getMainConfig()->get( 'HTTPProxy' );
 		wfShellExec( 'git read-tree -mu HEAD', $retval, [
 			"http_proxy" => $proxy,
 			"https_proxy" => $proxy,
@@ -82,7 +85,7 @@ class GitRepository {
 			mkdir( $gitFolder );
 			chdir( $gitFolder );
 
-			$proxy = Http::getProxy();
+			$proxy = (string)MediaWikiServices::getInstance()->getMainConfig()->get( 'HTTPProxy' );
 
 			$sparseCheckoutFile = '.git/info/sparse-checkout';
 			wfShellExec( 'git init' );
