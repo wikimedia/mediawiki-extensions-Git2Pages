@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"git2pages-desc": "Doda funkcijo razčlenjevalnika <code><nowiki>{{#snippet:}}</nowiki></code> za dodajanje vsebine na strani iz shrambe Git"
+}
