@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Yona b"
 		]
 	},
-	"git2pages-desc": "הוספת פונקציה ניתוח <code><nowiki>{{#snippet:}}</nowiki></code> כדי להוסיף מידע ממאגר GIT לעמודים"
+	"git2pages-desc": "הוספת פונקציית מפענח <code><nowiki>{{#snippet:}}</nowiki></code> להוספת תוכן ממאגר גיט לדפים"
 }
