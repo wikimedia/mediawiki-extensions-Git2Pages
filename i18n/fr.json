@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
-	"git2pages-desc": "Ajoute la fonction de l’analyseur <code><nowiki>{{#snippet:}}</nowiki></code> pour ajouter du contenu depuis un dépôt GIT dans les pages"
+	"git2pages-desc": "Ajoute la fonction de l’analyseur <code><nowiki>{{#snippet:}}</nowiki></code> pour ajouter du contenu dans les pages depuis un dépôt git."
 }
