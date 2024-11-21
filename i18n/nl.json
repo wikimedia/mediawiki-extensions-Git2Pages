@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"McDutchie"
 		]
 	},
-	"git2pages-desc": "Voegt de parserfunctie <code><nowiki>{{#snippet:}}</nowiki></code> toe om inhoud toe te voegen aan pagina's vanuit een git repository"
+	"git2pages-desc": "Voegt de parserfunctie <code><nowiki>{{#snippet:}}</nowiki></code> toe om vanuit een Git-repository aan pagina’s inhoud toe te voegen"
 }
