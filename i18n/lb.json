@@ -2,8 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"git2pages-desc": "Setzt d'Parserfonctioun <code><nowiki>{{#snippet:}}</nowiki></code> derbäi fir Inhalt aus engem GIT-Repository a Säiten ze setzen"
+	"git2pages-desc": "Setzt d'Parserfunktioun <code><nowiki>{{#snippet:}}</nowiki></code> derbäi fir Inhalt aus engem Git-Repository a Säiten ze setzen"
 }
