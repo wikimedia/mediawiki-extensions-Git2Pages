@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"git2pages-desc": "Pridáva funkciu syntaktického analyzátora <code><nowiki>{{#snippet:}}</nowiki></code> na pridávanie obsahu z git repozitára do stránok"
+}
